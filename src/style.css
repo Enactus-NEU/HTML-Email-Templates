@@ -1,0 +1,146 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffdf6;
+}
+@media only screen and (max-width: 1400px) {
+  .App {
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden !important;
+  }
+  .EditedEmail {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .wrapEditedEmail,
+  .ImportSection,
+  .ButtonGroup {
+    max-width: 370px;
+  }
+  .EditedEmail {
+    width: 370px !important;
+  }
+  #TextareaAutosize {
+    max-width: 350px;
+  }
+  .ImportText {
+    max-width: 370px;
+  }
+  .wrapEditedEmail {
+    margin: 0 0 30px 0 !important;
+  }
+}
+.ImportSection {
+  width: 670px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.ButtonGroup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 620px;
+  position: absolute;
+  top: 10px;
+}
+#type,
+#templates {
+  position: absolute;
+  left: 0;
+  border: 2px solid #696969;
+  padding: 3px 15px;
+  border-radius: 30px;
+  color: #444;
+  font-weight: bold;
+  outline: none;
+}
+.ImportButton,
+.ExportButton {
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #696969;
+  padding: 2.5px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
+  color: #444;
+}
+.ImportButton {
+  background-color: #ffc222;
+}
+.ExportButton {
+  position: absolute;
+  right: 0px;
+  background-color: white;
+}
+.ImportText {
+  position: absolute;
+  top: 60px;
+  border: #696969 2px solid;
+  border-radius: 20px;
+  background-color: white;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+}
+#TextareaAutosize {
+  margin: 20px 10px;
+  width: 600px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+.EditedEmail {
+  position: relative;
+  margin: 20px;
+  width: 800px;
+  height: 650px;
+}
+.wrapEditedEmail {
+  position: absolute;
+  top: 50px;
+  /* /* height: 600px; */
+  max-height: 600px;
+  width: 800px;
+  overflow: scroll;
+  border: 2px solid #696969;
+  border-radius: 20px;
+}
+.wrapEditedEmail {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.wrapEditedEmail::-webkit-scrollbar {
+  display: none;
+}
+.TextValue {
+  position: relative;
+}
+.DeleteButton {
+  position: absolute;
+  top: 14px;
+  right: 19px;
+  display: none;
+  font-size: 20px;
+}
+.DeleteButton:active {
+  top: 13px
+}
+.TextValue:hover {
+  background-color: #f9f9f9;
+}
+.TextValue:hover .DeleteButton{
+  display: block;
+}
+.medium-editor-toolbar li button:hover, .medium-editor-toolbar li .medium-editor-button-active {
+  color: #ffc222 !important
+}
