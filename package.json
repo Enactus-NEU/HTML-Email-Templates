@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Enactus-NEU.github.io/HTML-Email-Templates",
   "name": "enactus-neu",
   "version": "1.0.0",
   "description": "",
@@ -15,9 +16,12 @@
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
+    "gh-pages": "^3.1.0",
     "typescript": "4.1.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
