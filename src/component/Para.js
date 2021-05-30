@@ -45,20 +45,21 @@ class Para extends React.Component {
         this.props.dragAndDropChild([...updatedItems.slice(0, index), { data: text, type: updatedItem.type }, ...updatedItems.slice(index + 1)]);
     }
     render() {
+        const color = this.props.color ? this.props.color : "#555"
         return(
             <div className="Para">{
                 <ul style={{padding: "0px", listStyle: "none"}}>
                 {
                     this.props.value.map((item, index) => {
                         return (
-                            <li key={index} onDragOver={() => this.onDragOver(index)}>
+                            <li key={index} style={{padding: 0, margin: 0}} onDragOver={() => this.onDragOver(index)}>
                                 <div 
                                     className="TextValue"
                                     style={{
                                         padding: '16px 40px 13px 40px', 
                                         fontSize: '1.07rem', 
                                         fontFamily: 'sans-serif', 
-                                        color: '#555', 
+                                        color: color, 
                                         lineHeight: '1.4rem', 
                                         textAlign: 'justify',
                                         whiteSpace: "pre-line"

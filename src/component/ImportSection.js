@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ImportText from "./ImportText";
 
+import Validate from "../Validate"
+
 class ImportSection extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +25,8 @@ class ImportSection extends Component {
   }
   handleImport() {
     if (this.state.value) {
-      this.props.importValue({ data: this.state.value, type: this.state.type });
+      const dataValidate = Validate(this.state.value)
+      this.props.importValue({ data: dataValidate, type: this.state.type });
       this.setState({value: ""})
     }
   }
